@@ -29,3 +29,5 @@ knit        : slidify::knit2slides
 * Use ObjectAnimator.ofObject for more smooth transition between two color endpoints
 * Interim improvement - use rgbEvaluator to smooth transition between color transitions
 
+## Useful External Resource
+* [Android Holo Colors Generator](http://android-holo-colors.com/) creates drawable resources consistent with color branding of the developer
