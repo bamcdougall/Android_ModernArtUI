@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Modern Art UI</string>
+
+    <string name="hello_world">Let\'s draw some rectangles!</string>
+    <string name="action_settings">More Information</string>
+    <string name="title_activity_browser">BrowserActivity</string>
+    <string name="dialog_msg">Inspired by the works of artists such as Piet Mondrian and Ben Nicholson \n\n Click below to learn more!</string>
+    <string name="dialog_yes">Visit MOMA</string>
+    <string name="dialog_no">Not Now</string>
+</resources>

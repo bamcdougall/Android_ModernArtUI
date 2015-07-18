@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/rect01"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rect01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/rect02"
+        android:layout_below="@id/rect01"
+        android:background="@drawable/rect02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/rect03"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/rect01"
+        android:background="@drawable/rect03"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/rect04"
+        android:layout_below="@id/rect03"
+        android:layout_toRightOf="@id/rect02"
+        android:background="@drawable/rect04"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/rect05"
+        android:layout_below="@id/rect04"
+        android:layout_alignBottom="@id/rect02"
+        android:layout_toRightOf="@id/rect02"
+        android:background="@drawable/rect05"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rect02"
+        android:background="@color/black"  />
+
+</RelativeLayout>
