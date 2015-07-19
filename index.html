@@ -46,20 +46,21 @@
     <h2>Android Project - Modern Art UI</h2>
   </hgroup>
   <article data-timings="">
-    <h3>Provides graphic interface for dedicated link to MOMA.org</h3>
+    <h3>App provides graphic interface for dedicated link to MOMA.org</h3>
 
-<h3>Uses &quot;Overflow Menu&quot; with Menu to &quot;More Information&quot;</h3>
+<h3>App uses &quot;Overflow Menu&quot; with Menu to &quot;More Information&quot;</h3>
 
 <ul>
 <li>Provides user with options to open web browser that is linked to MOMA.org or cancel</li>
 <li>UI provides thumb slider that changes color of non-white / non-grey shapes</li>
-<li>Color transitions are reversible, but could be more smooth</li>
+<li>Colors for transitions are randomly selected, but starting frame is recoverable</li>
+<li>Color transitions are controlled by ObjectAnimator.ofObject and started by the SeekBar</li>
 </ul>
 
-<h2>Current Status</h2>
+<h2>Current Status of App</h2>
 
 <ul>
-<li><a href="http://youtu.be/_uTbukUdTTE">Link</a> shows screen-capture video of interface as of this writing</li>
+<li><a href="http://youtu.be/C0nIZTxgETQ">Screen-capture</a> shows video of this Android App</li>
 </ul>
 
   </article>
@@ -73,8 +74,6 @@
   <article data-timings="">
     <ul>
 <li>Dynamically program shape sizes and shape placments based on screen size of host device</li>
-<li>Use ObjectAnimator.ofObject for more smooth transition between two color endpoints</li>
-<li>Interim improvement - use rgbEvaluator to smooth transition between color transitions</li>
 </ul>
 
 <h2>Useful External Resource</h2>

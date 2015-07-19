@@ -13,21 +13,20 @@ knit        : slidify::knit2slides
 
 ## Android Project - Modern Art UI
 
-### Provides graphic interface for dedicated link to MOMA.org
+### App provides graphic interface for dedicated link to MOMA.org
 
-### Uses "Overflow Menu" with Menu to "More Information"
+### App uses "Overflow Menu" with Menu to "More Information"
 * Provides user with options to open web browser that is linked to MOMA.org or cancel
 * UI provides thumb slider that changes color of non-white / non-grey shapes
-* Color transitions are reversible, but could be more smooth
+* Colors for transitions are randomly selected, but starting frame is recoverable
+* Color transitions are controlled by ObjectAnimator.ofObject and started by the SeekBar
 
-## Current Status
-* [Link](http://youtu.be/_uTbukUdTTE) shows screen-capture video of interface as of this writing
+## Current Status of App
+* [Screen-capture](http://youtu.be/C0nIZTxgETQ) shows video of this Android App
 
 --- .class #id 
 ## Future Improvements
 * Dynamically program shape sizes and shape placments based on screen size of host device
-* Use ObjectAnimator.ofObject for more smooth transition between two color endpoints
-* Interim improvement - use rgbEvaluator to smooth transition between color transitions
 
 ## Useful External Resource
 * [Android Holo Colors Generator](http://android-holo-colors.com/) creates drawable resources consistent with color branding of the developer

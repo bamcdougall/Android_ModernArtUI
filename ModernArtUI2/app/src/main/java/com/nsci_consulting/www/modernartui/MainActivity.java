@@ -2,30 +2,30 @@ package com.nsci_consulting.www.modernartui;
 
 import android.content.Intent;
 import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.ShapeDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
+import android.widget.ImageView;
+import android.widget.SeekBar;
+import java.util.Random;
+import android.graphics.Color;
 import android.content.DialogInterface;
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.content.DialogInterface;
 import android.util.Log;
+import android.animation.ObjectAnimator;
 import android.animation.ArgbEvaluator;
-import android.app.Activity;
+/*
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;
-import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.graphics.Color;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
+import android.app.Activity;
 import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.SeekBar;
 import org.w3c.dom.Text;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
@@ -36,8 +36,11 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import java.util.ArrayList;
 import java.util.List;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.ShapeDrawable;
+import android.view.Gravity;
+*/
 
-import java.util.Random;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -60,11 +63,9 @@ public class MainActivity extends ActionBarActivity {
     private String[] colorArray = {"#B7B1D1", "#EB8D78", "#90C9AB",
             "#F6E870", "#276F97", "#303F9F", "#C5CAE9", "#3F51B5", "#FF7043"};
 
-/*
     // These two variables are futures for using animation for color transitions
     private String newColor1 = "";
     private String newColor2 = "";
-*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +80,7 @@ public class MainActivity extends ActionBarActivity {
         views[4] = (ImageView) findViewById(R.id.rect05);
 
         seekBar = (SeekBar) findViewById(R.id.seekBar);
-        seekBar.setMax(1000); // implelmented as a 20% slider for hue
+        seekBar.setMax(100); // implemented as a 20% slider for hue
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @Override
@@ -97,30 +98,50 @@ public class MainActivity extends ActionBarActivity {
 /*
                         // this color transition is strobo-like & irreversible
                         newColor1 = colorArray[(new Random().nextInt(colorArray.length))];
-                        newColor2 = colorArray[(new Random().nextInt(colorArray.length))];
                         ((GradientDrawable) views[i].getBackground()).setColor(
                                 Color.parseColor(newColor1));
 */
+/*
                         // this color transition is not that smooth, but is reversible
                         // based on setMax, hue varies by 2%
                         Color.colorToHSV(Color.parseColor(colorArray[i]), hsv);
-                        hsv[0] = hsv[0] * (1 + progress*20/1000) % 360;
+                        hsv[0] = hsv[0] * (1 + progress) % 360;  // modulus 360
                         ((GradientDrawable) views[i].getBackground()).setColor(
                                 Color.HSVToColor( hsv )
                         );
-/*
-                        // I would prefer smoothing color transition with animation, but
-                        // the following code is not working--colors remain static
-                        ObjectAnimator colorFade = ObjectAnimator.ofObject(views[i],
-                                "((GradientDrawable)views[i].getBackground()).setColor()", new ArgbEvaluator(),
-                                Color.parseColor(newColor1), Color.parseColor(newColor2));
-                        colorFade.setDuration(1000);
-                        colorFade.start();
 */
+                        if(progress == 0){
+                            ((GradientDrawable) views[i].getBackground()).setColor(
+                                    Color.parseColor(colorArray[i]));
+                        }else if(progress == 1){
+                            ((GradientDrawable) views[i].getBackground()).setColor(
+                                    Color.parseColor(colorArray[i]));
+                        }else if(progress == 2){
+                            newColor2 = colorArray[(new Random().nextInt(colorArray.length))];
+                            ObjectAnimator colorFade = ObjectAnimator.ofObject(((GradientDrawable) views[i].getBackground()),
+                                    "Color", new ArgbEvaluator(),
+                                    Color.parseColor(colorArray[i]), Color.parseColor(newColor2));
+                            colorFade.setDuration(16);
+                            colorFade.start();
+                        }else if(progress == 100){
+                            newColor1 = colorArray[(new Random().nextInt(colorArray.length))];
+                            newColor2 = colorArray[(new Random().nextInt(colorArray.length))];
+                            ObjectAnimator colorFade = ObjectAnimator.ofObject(((GradientDrawable) views[i].getBackground()),
+                                    "Color", new ArgbEvaluator(),
+                                    Color.parseColor(newColor1), Color.parseColor(newColor2));
+                            colorFade.setDuration(2000);
+                            colorFade.start();
+                        }else{
+                            newColor1 = colorArray[(new Random().nextInt(colorArray.length))];
+                            newColor2 = colorArray[(new Random().nextInt(colorArray.length))];
+                            ObjectAnimator colorFade = ObjectAnimator.ofObject(((GradientDrawable) views[i].getBackground()),
+                                    "Color", new ArgbEvaluator(),
+                                    Color.parseColor(newColor1), Color.parseColor(newColor2));
+                            colorFade.setDuration(16);
+                            colorFade.start();
+                        }
                     }
-
                 }
-
             }
 
             @Override
