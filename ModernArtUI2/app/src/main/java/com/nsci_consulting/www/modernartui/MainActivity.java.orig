@@ -53,8 +53,8 @@ public class MainActivity extends ActionBarActivity {
     private ImageView views[];
     float[] hsv = new float[3];
 /*
-    // I prefer using the resources that I defined for colors, but
-    // am unable to use a string array to set colors
+    // I prefer somehow using the resources that I set for colors, but
+    // am unable to use this string array to set color for now!
     private String[] colorArray = {"R.color.indigo_primary", "R.color.indigo_light",
     "R.color.indigo_dark", "R.color.blue_grey_light",
             "R.color.color5_lavendar", "R.color.color5_yellow", "R.color.color5_cyan",
@@ -63,7 +63,7 @@ public class MainActivity extends ActionBarActivity {
     private String[] colorArray = {"#B7B1D1", "#EB8D78", "#90C9AB",
             "#F6E870", "#276F97", "#303F9F", "#C5CAE9", "#3F51B5", "#FF7043"};
 
-    // These two variables are used for selecting color endpoints for color transitions
+    // These two variables are futures for using animation for color transitions
     private String newColor1 = "";
     private String newColor2 = "";
 
@@ -80,13 +80,17 @@ public class MainActivity extends ActionBarActivity {
         views[4] = (ImageView) findViewById(R.id.rect05);
 
         seekBar = (SeekBar) findViewById(R.id.seekBar);
-        seekBar.setMax(100); // can be implemented as a 20% slider for hue
+<<<<<<< HEAD
+        seekBar.setMax(1000); // implelmented as a 20% slider for hue
+=======
+        seekBar.setMax(100); // implemented as a 20% slider for hue
+>>>>>>> gh-pages
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                // Goal:  link changes in background colors for non white ImageViews
-                //        to the SeekBar. Default range is between 0 & 100
+                // Goal:  change background colors of non white ImageViews with progress of seekbar
+                //        default range is between 0 & 100
                 for (int i = 0; i<5 ;i++){
 
                     if(i != 3){
@@ -102,10 +106,14 @@ public class MainActivity extends ActionBarActivity {
                                 Color.parseColor(newColor1));
 */
 /*
-                        // this color transition is not very smooth, but is reversible
-                        // based on setMax of the SeekBar.  Variation of hue should be <= 20%
+                        // this color transition is not that smooth, but is reversible
+                        // based on setMax, hue varies by 2%
                         Color.colorToHSV(Color.parseColor(colorArray[i]), hsv);
+<<<<<<< HEAD
+                        hsv[0] = hsv[0] * (1 + progress*20/1000) % 360;
+=======
                         hsv[0] = hsv[0] * (1 + progress) % 360;  // modulus 360
+>>>>>>> gh-pages
                         ((GradientDrawable) views[i].getBackground()).setColor(
                                 Color.HSVToColor( hsv )
                         );

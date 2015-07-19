@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Abstract</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<h2>Abstract</h2>
+
+<p>This GitHub Repository contains an Android Project built within Android Studio.  In addition to the Android Project (1,133 files within 408 folders), this root directory contains <strong>5</strong> primary info-related files:</p>
+
+<ul>
+<li><strong>ReadMe.md</strong> This file</li>
+<li><strong>ReadMe.txt</strong> ReadMe.txt provides environment information for the build of this project</li>
+<<<<<<< HEAD
+<li><strong>index.Rmd</strong> ModernArtUI.Rmd is a file that generates the content of a Slidify presentation using the command author(&#39;index.Rmd&#39;).  The file can be revised using the command slidify(&#39;ModernArtUI.Rmd&#39;)</li>
+=======
+<li><strong>index.Rmd</strong> ModernArtUI.Rmd is a file that generates content of a Slidify presentation using the command slidify(&#39;ModernArtUI.Rmd&#39;).  The output is <strong>index.html</strong></li>
+>>>>>>> gh-pages
+<li><strong>CodeBook.md</strong> CodeBook.Rmd contains definitions for the more variables of the Android Project</li>
+<li><strong>License</strong> License is the GNU GENERAL PUBLIC LICENSE (version 2) </li>
+</ul>
+
+<h2>Additional Notes</h2>
+
+<ul>
+<<<<<<< HEAD
+<li><strong>index.html</strong> is a front-end user-facing file used for the gh-pages branch of the Repository.  The file is a Slidify presentation for this Android Project.  For more information, see <a href="http://bamcdougall.github.io/Android_ModernArtUI">http://bamcdougall.github.io/Android_ModernArtUI</a> for this Repository.</li>
+<li><strong><a href="http://youtu.be/_uTbukUdTTE">Link</a></strong> shows screen-capture video of interface as of this writing</li>
+<li><strong><a href="http://android-holo-colors.com/">Android Holo Colors Generator</a></strong> creates drawable resources consistent with color branding of the developer</li>
+=======
+<li><strong>index.html</strong> is a front-end user-facing file comprising the gh-pages branch of this Repository.  The file is a Slidify presentation for this Android Project, which is <a href="http://bamcdougall.github.io/Android_ModernArtUI">http://bamcdougall.github.io/Android_ModernArtUI</a>.</li>
+<li><a href="http://youtu.be/C0nIZTxgETQ">Screen-capture</a> shows video of this Android App</li>
+<li><a href="http://android-holo-colors.com/">Android Holo Colors Generator</a> creates drawable resources consistent with color branding of the developer</li>
+>>>>>>> gh-pages
+</ul>
+
+</body>
+
+</html>
