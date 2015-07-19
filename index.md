@@ -21,7 +21,7 @@ knit        : slidify::knit2slides
 * Color transitions are reversible, but could be more smooth
 
 ## Current Status
-* Link shows YouTube video of interface as of this writing
+* [Link](http://youtu.be/_uTbukUdTTE) shows screen-capture video of interface as of this writing
 
 --- .class #id 
 ## Future Improvements

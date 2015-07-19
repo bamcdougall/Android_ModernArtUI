@@ -79,7 +79,7 @@ public class MainActivity extends ActionBarActivity {
         views[4] = (ImageView) findViewById(R.id.rect05);
 
         seekBar = (SeekBar) findViewById(R.id.seekBar);
-        seekBar.setMax(20); // essentially is a 20% slider for hue
+        seekBar.setMax(1000); // implelmented as a 20% slider for hue
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @Override
@@ -102,9 +102,9 @@ public class MainActivity extends ActionBarActivity {
                                 Color.parseColor(newColor1));
 */
                         // this color transition is not that smooth, but is reversible
-                        // based on setMax, hue varies by 20%
+                        // based on setMax, hue varies by 2%
                         Color.colorToHSV(Color.parseColor(colorArray[i]), hsv);
-                        hsv[0] = hsv[0] * (1 + progress) % 360;
+                        hsv[0] = hsv[0] * (1 + progress*20/1000) % 360;
                         ((GradientDrawable) views[i].getBackground()).setColor(
                                 Color.HSVToColor( hsv )
                         );

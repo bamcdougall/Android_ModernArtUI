@@ -14,7 +14,11 @@ This GitHub Repository contains an Android Project built within Android Studio. 
 - **ReadMe.md** This file
 - **ReadMe.txt** ReadMe.txt provides environment information for the build of this project
 - **index.Rmd** ModernArtUI.Rmd is a file that generates the content of a Slidify presentation using the command author('index.Rmd').  The file can be revised using the command slidify('ModernArtUI.Rmd')
-- **CodeBook.Rmd** CodeBook.Rmd contains definitions for the more variables of the Android Project
+- **CodeBook.md** CodeBook.Rmd contains definitions for the more variables of the Android Project
 - **License** License is the GNU GENERAL PUBLIC LICENSE (version 2) 
 
-Use of **index.html** is a front-end user-facing file used for the gh-pages branch of the Repository.  The file is the Slidify presentation for this Android Project.  For more information, see [http://bamcdougall.github.io/Android_ModernArtUI](http://bamcdougall.github.io/Android_ModernArtUI) for this Repository.
+## Additional Notes
+
+- **index.html** is a front-end user-facing file used for the gh-pages branch of the Repository.  The file is a Slidify presentation for this Android Project.  For more information, see [http://bamcdougall.github.io/Android_ModernArtUI](http://bamcdougall.github.io/Android_ModernArtUI) for this Repository.
+- **[Link](http://youtu.be/_uTbukUdTTE)** shows screen-capture video of interface as of this writing
+- **[Android Holo Colors Generator](http://android-holo-colors.com/)** creates drawable resources consistent with color branding of the developer
