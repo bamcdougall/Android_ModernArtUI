@@ -9,12 +9,16 @@ output      : html_document
 
 ## Abstract
 
-This GitHub Repository contains an Android Project built within Android Studio.  In addition to the Android Project (itself containing a plenitude of files and directories), this directory contains **5** primary info-related files:
+This GitHub Repository contains an Android Project built within Android Studio.  In addition to the Android Project (1,133 files within 408 folders), this root directory contains **5** primary info-related files:
 
 - **ReadMe.md** This file
 - **ReadMe.txt** ReadMe.txt provides environment information for the build of this project
-- **index.Rmd** ModernArtUI.Rmd is a file that generates the content of a Slidify presentation using the command author('index.Rmd').  The file can be revised using the command slidify('ModernArtUI.Rmd')
-- **CodeBook.Rmd** CodeBook.Rmd contains definitions for the more variables of the Android Project
+- **index.Rmd** ModernArtUI.Rmd is a file that generates content of a Slidify presentation using the command slidify('ModernArtUI.Rmd').  The output is **index.html**
+- **CodeBook.md** CodeBook.Rmd contains definitions for the more variables of the Android Project
 - **License** License is the GNU GENERAL PUBLIC LICENSE (version 2) 
 
-Use of **index.html** is a front-end user-facing file used for the gh-pages branch of the Repository.  The file is the Slidify presentation for this Android Project.  For more information, see [http://bamcdougall.github.io/Android_ModernArtUI](http://bamcdougall.github.io/Android_ModernArtUI) for this Repository.
+## Additional Notes
+
+- **index.html** is a front-end user-facing file comprising the gh-pages branch of this Repository.  The file is a Slidify presentation for this Android Project, which is [http://bamcdougall.github.io/Android_ModernArtUI](http://bamcdougall.github.io/Android_ModernArtUI).
+- [Screen-capture](http://youtu.be/C0nIZTxgETQ) shows video of this Android App
+- [Android Holo Colors Generator](http://android-holo-colors.com/) creates drawable resources consistent with color branding of the developer
